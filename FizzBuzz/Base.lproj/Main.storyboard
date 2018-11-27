@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,69 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adN-rH-hKk">
+                                <rect key="frame" x="299" y="802" width="99" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.97254901960784312" green="0.95294117647058818" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 / 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-Zb-iYs">
+                                <rect key="frame" x="344" y="44" width="44" height="28"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.97254901959999995" green="0.95294117649999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fh-N9-WZ5">
+                                <rect key="frame" x="40" y="286" width="334" height="334"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYd-7e-AMD">
+                                        <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="160.33333333333334"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aus-9p-5VM">
+                                        <rect key="frame" x="0.0" y="172.33333333333331" width="160.66666666666666" height="161.66666666666669"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Aus-9p-5VM" secondAttribute="trailing" constant="173.5" id="3WS-4L-Ily"/>
+                                    <constraint firstItem="AYd-7e-AMD" firstAttribute="top" secondItem="4fh-N9-WZ5" secondAttribute="top" id="6Un-bk-tVD"/>
+                                    <constraint firstItem="AYd-7e-AMD" firstAttribute="width" secondItem="4fh-N9-WZ5" secondAttribute="width" multiplier="0.48" id="8jE-2f-L7m"/>
+                                    <constraint firstAttribute="height" constant="334" id="I7k-Sm-qjV"/>
+                                    <constraint firstItem="AYd-7e-AMD" firstAttribute="leading" secondItem="4fh-N9-WZ5" secondAttribute="leading" id="OpO-wF-vQi"/>
+                                    <constraint firstItem="AYd-7e-AMD" firstAttribute="height" secondItem="4fh-N9-WZ5" secondAttribute="height" multiplier="0.48" id="TU1-Wx-vGG"/>
+                                    <constraint firstItem="Aus-9p-5VM" firstAttribute="top" secondItem="AYd-7e-AMD" secondAttribute="bottom" constant="12" id="bjq-Km-jaG"/>
+                                    <constraint firstAttribute="width" constant="334" id="lVr-Se-O3g"/>
+                                    <constraint firstAttribute="bottom" secondItem="Aus-9p-5VM" secondAttribute="bottom" id="n0U-23-wXC"/>
+                                    <constraint firstItem="Aus-9p-5VM" firstAttribute="leading" secondItem="4fh-N9-WZ5" secondAttribute="leading" id="rGp-oj-3QV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.72156862745098038" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OWs-Zb-iYs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="5q5-x6-hIz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OWs-Zb-iYs" secondAttribute="trailing" constant="26" id="9nK-YE-mjV"/>
+                            <constraint firstItem="adN-rH-hKk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="DVI-Ab-V28"/>
+                            <constraint firstItem="4fh-N9-WZ5" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EIW-KF-Llj"/>
+                            <constraint firstItem="4fh-N9-WZ5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TqT-kt-d5D"/>
+                            <constraint firstItem="OWs-Zb-iYs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bcR-vd-Z8x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adN-rH-hKk" secondAttribute="bottom" constant="20" id="hYk-Pl-57a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adN-rH-hKk" secondAttribute="trailing" constant="16" id="wJQ-Fo-uzm"/>
+                            <constraint firstItem="4fh-N9-WZ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="yyN-Jj-46T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +83,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+    </resources>
 </document>
