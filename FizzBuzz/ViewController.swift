@@ -12,11 +12,32 @@ class ViewController: UIViewController {
     
     var game: Game?
     
-    var gameScore: Int?
+    var gameScore: Int? {
+        didSet {
+            guard let unwrappedScore = self.gameScore else {
+                print("gameScore is not initialized.")
+                return
+            }
+            numberButton.setTitle("\(unwrappedScore)", for: .normal)
+        }
+    }
+    
+    @IBOutlet weak var numberButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        game = Game()
+        guard let unwrappedGame = self.game else {
+            print("Game is not initialized yet. So...")
+            game = Game()
+            guard let unwrappedGameScore = game?.score else {
+                self.gameScore = 0
+                return
+            }
+            self.gameScore = unwrappedGameScore
+            return
+        }
+        print("The game is initialized, ya heard!")
+        self.gameScore = unwrappedGame.score
     }
 
 
@@ -26,6 +47,16 @@ class ViewController: UIViewController {
             return
         }
         self.gameScore = unwrappedGame.play(move: move).score
+    }
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        guard let unwrappedScore = self.gameScore else {
+            print("Game score is nil")
+            return
+        }
+        
+        let nextScore = unwrappedScore + 1
+        play(move: "\(nextScore)")
     }
 }
 

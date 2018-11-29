@@ -36,10 +36,14 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-aZ-EoI">
                                         <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="160.33333333333334"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
                                         <state key="normal" title="0" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p0K-2l-dxY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdi-sS-j08">
                                         <rect key="frame" x="0.0" y="173.66666666666669" width="160.33333333333334" height="160.33333333333331"/>
@@ -91,11 +95,16 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adN-rH-hKk" secondAttribute="bottom" constant="20" id="EDi-K3-1eW"/>
                             <constraint firstItem="l1T-mL-cHS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KTw-XD-e7z"/>
                             <constraint firstItem="l1T-mL-cHS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QcT-zG-0PR"/>
-                            <constraint firstItem="l1T-mL-cHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nXG-Ry-ik5"/>
+                            <constraint firstItem="l1T-mL-cHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nXG-Ry-ik5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                            </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OWs-Zb-iYs" secondAttribute="trailing" constant="26" id="pDa-o6-QE3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="numberButton" destination="KcH-aZ-EoI" id="wbw-co-2aY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
