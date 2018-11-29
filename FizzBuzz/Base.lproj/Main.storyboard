@@ -32,29 +32,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1T-mL-cHS">
-                                <rect key="frame" x="40" y="171" width="334" height="414"/>
+                                <rect key="frame" x="40" y="211" width="334" height="334"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-aZ-EoI">
-                                        <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="198.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="160.33333333333334"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
                                         <state key="normal" title="0" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdi-sS-j08">
-                                        <rect key="frame" x="0.0" y="215.33333333333331" width="160.33333333333334" height="198.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="173.66666666666669" width="160.33333333333334" height="160.33333333333331"/>
                                         <state key="normal" image="lightning" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyt-VB-UK9">
-                                        <rect key="frame" x="173.66666666666663" y="0.0" width="160.33333333333337" height="198.66666666666666"/>
+                                        <rect key="frame" x="173.66666666666663" y="0.0" width="160.33333333333337" height="160.33333333333334"/>
                                         <state key="normal" image="champagne" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qio-VL-pke">
-                                        <rect key="frame" x="173.66666666666663" y="215.33333333333331" width="160.33333333333337" height="198.66666666666669"/>
+                                        <rect key="frame" x="173.66666666666663" y="173.66666666666669" width="160.33333333333337" height="160.33333333333331"/>
                                         <state key="normal" image="space" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -63,6 +63,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="KcH-aZ-EoI" firstAttribute="width" secondItem="l1T-mL-cHS" secondAttribute="width" multiplier="0.48" id="8U7-8j-oHR"/>
+                                    <constraint firstAttribute="width" secondItem="l1T-mL-cHS" secondAttribute="height" multiplier="1:1" id="9bM-i8-cPA"/>
                                     <constraint firstItem="pyt-VB-UK9" firstAttribute="top" secondItem="l1T-mL-cHS" secondAttribute="top" id="D2z-lx-vtb"/>
                                     <constraint firstItem="KcH-aZ-EoI" firstAttribute="leading" secondItem="l1T-mL-cHS" secondAttribute="leading" id="Lp9-dH-EV3"/>
                                     <constraint firstAttribute="trailing" secondItem="Qio-VL-pke" secondAttribute="trailing" id="Odj-PE-vj8"/>
@@ -89,7 +90,6 @@
                             <constraint firstItem="OWs-Zb-iYs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BUu-Kl-aNl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adN-rH-hKk" secondAttribute="bottom" constant="20" id="EDi-K3-1eW"/>
                             <constraint firstItem="l1T-mL-cHS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KTw-XD-e7z"/>
-                            <constraint firstAttribute="width" secondItem="l1T-mL-cHS" secondAttribute="height" multiplier="1:1" id="LBz-SQ-ZfC"/>
                             <constraint firstItem="l1T-mL-cHS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QcT-zG-0PR"/>
                             <constraint firstItem="l1T-mL-cHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nXG-Ry-ik5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OWs-Zb-iYs" secondAttribute="trailing" constant="26" id="pDa-o6-QE3"/>
