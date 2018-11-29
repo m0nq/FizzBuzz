@@ -40,4 +40,16 @@ class ViewControllerTests: XCTestCase {
     func testHasAGame() {
         XCTAssertNotNil(viewController.game)
     }
+    
+    func testPlayerDoesntScores() {
+        viewController.game?.score = 1
+        viewController.play(move: "3")
+        XCTAssertEqual(viewController.gameScore, 1)
+    }
+    
+    func testPlayerDoesScore() {
+        viewController.game?.score = 2
+        viewController.play(move: "Fizz")
+        XCTAssertEqual(viewController.gameScore, 3)
+    }
 }
