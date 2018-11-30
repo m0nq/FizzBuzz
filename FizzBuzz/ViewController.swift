@@ -12,13 +12,9 @@ class ViewController: UIViewController {
     
     var game: Game?
     
-    var gameScore: Int? {
+    var gameCounter: Int? {
         didSet {
-            guard let unwrappedScore = self.gameScore else {
-                print("gameScore is not initialized.")
-                return
-            }
-            numberButton.setTitle("\(unwrappedScore)", for: .normal)
+            numberButton.setTitle("\(self.gameCounter ?? 0)", for: .normal)
         }
     }
     
@@ -30,14 +26,14 @@ class ViewController: UIViewController {
             print("Game is not initialized yet. So...")
             game = Game()
             guard let unwrappedGameScore = game?.score else {
-                self.gameScore = 0
+                self.gameCounter = 0
                 return
             }
-            self.gameScore = unwrappedGameScore
+            self.gameCounter = unwrappedGameScore
             return
         }
         print("The game is initialized, ya heard!")
-        self.gameScore = unwrappedGame.score
+        self.gameCounter = unwrappedGame.score
     }
 
 
@@ -46,17 +42,18 @@ class ViewController: UIViewController {
             print("Game is nil!")
             return
         }
-        self.gameScore = unwrappedGame.play(move: move).score
+        _ = unwrappedGame.play(move: move)
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let unwrappedScore = self.gameScore else {
+        guard let unwrappedCounter = self.gameCounter else {
             print("Game score is nil")
             return
         }
         
-        let nextScore = unwrappedScore + 1
-        play(move: "\(nextScore)")
+        self.gameCounter = unwrappedCounter + 1
+        play(move: "\(self.gameCounter ?? 0)")
     }
 }
+
 
