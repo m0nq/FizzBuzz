@@ -52,6 +52,13 @@ class ViewController: UIViewController {
         }
         
         self.gameCounter = unwrappedCounter + 1
+        // right now we're only sending the game counter
+        // needs to be the value associated with the sender
+        // figure out how to have play called under different sender conditions
+        
+        // here's your hint...
+        print("sender -> \(sender.accessibilityIdentifier!)")
+        
         play(move: "\(self.gameCounter ?? 0)")
     }
 }

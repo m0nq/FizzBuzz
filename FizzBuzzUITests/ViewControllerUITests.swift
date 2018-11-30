@@ -27,8 +27,9 @@ class ViewControllerUITests: XCTestCase {
     }
     
     func testTapNumberButtonIncrementsScore() {
+        // When the button is tapped, the score should be incremented and displayed on the screen accordingly...
         XCUIApplication().buttons["numberButton"].tap()
-        let newScore = XCUIApplication().buttons["numberButton"].label
+        let newScore = XCUIApplication().staticTexts.element(matching: .any, identifier: "playerScore").label
         XCTAssertEqual(newScore, "1")
     }
     
