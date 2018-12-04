@@ -14,42 +14,35 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>GameTests.testGameStartsAtZero.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>All in BrainTests.swift.xcscheme</key>
+		<key>ViewControllerTests.testMove1IncrementsScore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BrainTests.testIsDivisibleByFive.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>BrainTests.testIsDivisibleByThree.xcscheme</key>
+		<key>ViewControllerTests.testMove2IncrementScore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>ViewControllerTests.test.xcscheme</key>
+		<key>All in BrainTests.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>5</integer>
-		</dict>
-		<key>ViewControllerTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 	</dict>
 </dict>

@@ -9,31 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     var game: Game?
-    
+
     var gameCounter: Int? {
         didSet {
-            numberButton.setTitle("\(self.gameCounter ?? 0)", for: .normal)
+            numberButton.setTitle("\(self.gameCounter ?? 1)", for: .normal)
         }
     }
-    
+
     @IBOutlet weak var numberButton: UIButton!
-    
+    @IBOutlet weak var gameScore: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let unwrappedGame = self.game else {
             print("Game is not initialized yet. So...")
             game = Game()
             guard let unwrappedGameScore = game?.score else {
-                self.gameCounter = 0
+                gameScore.text = "0"
                 return
             }
-            self.gameCounter = unwrappedGameScore
+            gameScore.text = "\(unwrappedGameScore)"
             return
         }
-        print("The game is initialized, ya heard!")
-        self.gameCounter = unwrappedGame.score
+        gameScore.text = "\(unwrappedGame.score)"
     }
 
 
@@ -42,24 +42,35 @@ class ViewController: UIViewController {
             print("Game is nil!")
             return
         }
-        _ = unwrappedGame.play(move: move)
+        self.gameScore.text = "\(unwrappedGame.play(move: move, counter: self.gameCounter ?? 1).score)"
     }
-    
+
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let unwrappedCounter = self.gameCounter else {
+        guard let unwrappedCounterNumber = self.gameCounter else {
             print("Game score is nil")
             return
         }
-        
-        self.gameCounter = unwrappedCounter + 1
+
+        self.gameCounter = unwrappedCounterNumber + 1
         // right now we're only sending the game counter
-        // needs to be the value associated with the sender
+        // and it needs to be the value associated with the sender
         // figure out how to have play called under different sender conditions
-        
+
         // here's your hint...
         print("sender -> \(sender.accessibilityIdentifier!)")
-        
-        play(move: "\(self.gameCounter ?? 0)")
+
+        switch sender.accessibilityIdentifier! {
+        case "numberButton":
+            play(move: "\(self.gameCounter ?? 0)")
+        case "fizzButton":
+            play(move: "Fizz")
+        case "buzzButton":
+            play(move: "Buzz")
+        case "fizzBuzzButton":
+            play(move: "FizzBuzz")
+        default:
+           print("You pushed a button that doesn't exist. How did you do that? O.o")
+        }
     }
 }
 

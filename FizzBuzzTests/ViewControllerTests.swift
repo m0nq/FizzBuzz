@@ -18,38 +18,38 @@ class ViewControllerTests: XCTestCase {
         UIApplication.shared.keyWindow!.rootViewController = viewController
 
         let _ = viewController.view
+        viewController.gameCounter = 1
     }
 
     override func tearDown() {
         super.tearDown()
+        viewController.game?.score = 1
+        viewController.gameScore.text = "1"
     }
 
     func testMove1IncrementsScore() {
         viewController.play(move: "1")
-        let newScore = viewController.game?.score
-        XCTAssertEqual(newScore, 1)
+        let newScore = viewController.gameScore.text
+        XCTAssertEqual(newScore, "1")
     }
     
     func testMove2IncrementScore() {
-        viewController.play(move: "1")
+        viewController.game?.score = 2
         viewController.play(move: "2")
-        let newScore = viewController.game?.score
-        XCTAssertEqual(newScore, 2)
-    }
-    
-    func testHasAGame() {
-        XCTAssertNotNil(viewController.game)
+        let newScore = viewController.gameScore.text
+        XCTAssertEqual(newScore, "2")
     }
     
     func testPlayerDoesntScores() {
         viewController.game?.score = 1
         viewController.play(move: "3")
-        XCTAssertEqual(viewController.game?.score, 1)
+        XCTAssertEqual(viewController.gameScore.text, "1")
     }
     
     func testPlayerDoesScore() {
+        viewController.gameCounter = 3
         viewController.game?.score = 2
         viewController.play(move: "Fizz")
-        XCTAssertEqual(viewController.game?.score, 3)
+        XCTAssertEqual(viewController.gameScore.text, "3")
     }
 }

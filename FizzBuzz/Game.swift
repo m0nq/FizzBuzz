@@ -13,8 +13,8 @@ class Game {
     var score = 0
     let brain = Brain()
     
-    func play(move: String) -> (right: Bool, score: Int) {
-        let result = brain.check(number: self.score + 1)
+    func play(move: String, counter: Int) -> (right: Bool, score: Int) {
+        let result = brain.check(number: counter)
         if result == move {
             self.score += 1
             return (true, score)

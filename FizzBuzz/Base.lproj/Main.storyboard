@@ -116,6 +116,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="gameScore" destination="OWs-Zb-iYs" id="Ly1-tB-rKW"/>
                         <outlet property="numberButton" destination="KcH-aZ-EoI" id="wbw-co-2aY"/>
                     </connections>
                 </viewController>
