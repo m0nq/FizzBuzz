@@ -39,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="160.33333333333334" height="160.33333333333334"/>
                                         <accessibility key="accessibilityConfiguration" identifier="numberButton"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
-                                        <state key="normal" title="0" backgroundImage="button_border">
+                                        <state key="normal" title="1" backgroundImage="button_border">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

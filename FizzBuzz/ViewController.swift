@@ -43,25 +43,23 @@ class ViewController: UIViewController {
             return
         }
         self.gameScore.text = "\(unwrappedGame.play(move: move, counter: self.gameCounter ?? 1).score)"
+        self.gameCounter = (self.gameCounter ?? 1) + 1
     }
 
     @IBAction func buttonTapped(_ sender: UIButton) {
-        guard let unwrappedCounterNumber = self.gameCounter else {
+        guard self.gameCounter != nil else {
             print("Game score is nil")
+            self.gameCounter = 1
+            playMove(sender: sender)
             return
         }
+        playMove(sender: sender)
+    }
 
-        self.gameCounter = unwrappedCounterNumber + 1
-        // right now we're only sending the game counter
-        // and it needs to be the value associated with the sender
-        // figure out how to have play called under different sender conditions
-
-        // here's your hint...
-        print("sender -> \(sender.accessibilityIdentifier!)")
-
+    private func playMove(sender: UIButton) {
         switch sender.accessibilityIdentifier! {
         case "numberButton":
-            play(move: "\(self.gameCounter ?? 0)")
+            play(move: "\(self.gameCounter ?? 1)")
         case "fizzButton":
             play(move: "Fizz")
         case "buzzButton":
@@ -69,7 +67,7 @@ class ViewController: UIViewController {
         case "fizzBuzzButton":
             play(move: "FizzBuzz")
         default:
-           print("You pushed a button that doesn't exist. How did you do that? O.o")
+            print("You pushed a button that doesn't exist. How did you do that? O.o")
         }
     }
 }
