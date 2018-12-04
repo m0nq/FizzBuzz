@@ -70,6 +70,12 @@ class ViewController: UIViewController {
             print("You pushed a button that doesn't exist. How did you do that? O.o")
         }
     }
+    
+    @IBAction func playAgain(_ sender: Any) {
+        self.gameScore.text = "0"
+        game?.score = 0
+        self.gameCounter = 1
+    }
 }
 
 
