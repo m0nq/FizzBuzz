@@ -18,6 +18,7 @@
 		4028B74521ACB1C70001AE0B /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028B74421ACB1C70001AE0B /* GameTests.swift */; };
 		4028B74721ACB21B0001AE0B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4028B74621ACB21B0001AE0B /* Game.swift */; };
 		FCC0C6A85BB191FC85ADB2B2 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0CB2D5622EB1A39FCE85A /* ViewControllerTests.swift */; };
+		FCC0CF40AFB051B6B7C2F800 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC0C1F284B98A794DBDA142 /* Move.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		4028B74121ACAAA50001AE0B /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		4028B74421ACB1C70001AE0B /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		4028B74621ACB21B0001AE0B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FCC0C1F284B98A794DBDA142 /* Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		FCC0CB2D5622EB1A39FCE85A /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				4028B71A21ACA9700001AE0B /* LaunchScreen.storyboard */,
 				4028B71D21ACA9700001AE0B /* Info.plist */,
 				4028B74621ACB21B0001AE0B /* Game.swift */,
+				FCC0C1F284B98A794DBDA142 /* Move.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				4028B71221ACA96F0001AE0B /* AppDelegate.swift in Sources */,
 				4028B74221ACAAA50001AE0B /* Brain.swift in Sources */,
 				4028B74721ACB21B0001AE0B /* Game.swift in Sources */,
+				FCC0CF40AFB051B6B7C2F800 /* Move.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

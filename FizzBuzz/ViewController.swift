@@ -37,7 +37,7 @@ class ViewController: UIViewController {
     }
 
 
-    func play(move: String) {
+    func play(move: Move) {
         guard let unwrappedGame = game else {
             print("Game is nil!")
             return
@@ -59,13 +59,13 @@ class ViewController: UIViewController {
     private func playMove(sender: UIButton) {
         switch sender.accessibilityIdentifier! {
         case "numberButton":
-            play(move: "\(self.gameCounter ?? 1)")
+            play(move: Move.number(self.gameCounter ?? 1))
         case "fizzButton":
-            play(move: "Fizz")
+            play(move: Move.fizz)
         case "buzzButton":
-            play(move: "Buzz")
+            play(move: Move.buzz)
         case "fizzBuzzButton":
-            play(move: "FizzBuzz")
+            play(move: Move.fizzBuzz)
         default:
             print("You pushed a button that doesn't exist. How did you do that? O.o")
         }

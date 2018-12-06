@@ -9,35 +9,35 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>GameTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>GameTests.testGameStartsAtZero.xcscheme</key>
+		<key>BrainTests.testSayBuzz.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>ViewControllerTests.testMove1IncrementsScore.xcscheme</key>
+		<key>BrainTests.testSayFizzBuzz.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>ViewControllerTests.testMove2IncrementScore.xcscheme</key>
+		<key>BrainTests.testSaysOne.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>GameTests.testPlayShouldReturnNewScore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>All in BrainTests.swift.xcscheme</key>
+		<key>ViewControllerTests.testPlayerDoesScore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
